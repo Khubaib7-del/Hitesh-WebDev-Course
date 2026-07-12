@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page Project</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #6bcb79;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background-color: #60eb40;
+            border-radius: 8px;
+            padding: 30px;
+            width: 300px;
+        }
+
+        h2 {
+            color: #0f1c2e;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #07d51b;
+            border: none;
+            color: #161111;
+        }
+
+        input::placeholder {
+            color: #161111;
+        }
+
+        button {
+            background-color: #0ce469;
+            color: #161111;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        button:hover {
+            background-color: #037a15;
+        }
+
+        .name {
+            display: flex;
+            gap: 17px;
+        }
+
+        .name input {
+            width: 120px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h2>Login</h2>
+        <form>
+            <input type="email" placeholder="Email">
+            <div class="name">
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+            </div>
+            <input type="password" placeholder="Password">
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</body>
+
+</html>

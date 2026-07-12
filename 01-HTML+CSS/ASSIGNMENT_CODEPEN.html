@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Shoe Card</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 50%, #16213e 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #1a1f3a 0%, #16213e 100%);
+            color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.961), 0 0 30px rgba(212, 175, 55, 0.2);
+            width: 650px;
+            padding: 25px;
+            overflow: hidden;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        /* Shoe animation */
+        .card img {
+            width: 220px;
+            height: auto;
+            opacity: 0;
+            transform: translateX(-200px) rotate(0deg);
+            animation: shoeEntry 1.5s ease-out forwards;
+            filter: drop-shadow(5px 20px 15px rgba(212, 175, 55, 0.3));
+        }
+
+        @keyframes shoeEntry {
+            0% {
+                opacity: 0;
+                transform: translateX(-200px) rotate(0deg);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: translateX(-100px) rotate(90deg);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0) rotate(360deg);
+            }
+        }
+
+        .info {
+            margin-left: 30px;
+            flex: 1;
+        }
+
+        /* Heading animation from top */
+        .info h2 {
+            font-size: 26px;
+            margin-bottom: 12px;
+            color: #d4af37;
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: headingEntry 1.2s ease-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes headingEntry {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Description animation from right */
+        .info p {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            color: #e8dcc8;
+            opacity: 0;
+            transform: translateX(80px);
+            animation: textEntry 1.2s ease-out forwards;
+            animation-delay: 1s;
+        }
+
+        @keyframes textEntry {
+            from {
+                opacity: 0;
+                transform: translateX(80px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Price capsule */
+        .price-capsule {
+            background: linear-gradient(135deg, #d4af37 0%, #f4d47a 100%);
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3px;
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: textEntry 1.2s ease-out forwards;
+            animation-delay: 1.3s;
+        }
+
+        .price-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: #1a1f3a;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .price-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1a1f3a;
+        }
+
+        /* Buttons animation from bottom */
+        .buttons {
+            display: flex;
+            gap: 15px;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: buttonsEntry 1.2s ease-out forwards;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes buttonsEntry {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        button {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        .cart {
+            background-color: rgba(212, 175, 55, 0.2);
+            color: #d4af37;
+            box-shadow: 5px 5px 10px rgba(212, 175, 55, 0.2);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+        }
+
+        .cart:hover {
+            background-color: rgba(212, 175, 55, 0.3);
+        }
+
+        .buy {
+            background: linear-gradient(135deg, #d4af37 0%, #f4d47a 100%);
+            color: #1a1f3a;
+            box-shadow: 5px 5px 10px rgba(212, 175, 55, 0.3);
+            font-weight: 700;
+        }
+
+        .buy:hover {
+            background: linear-gradient(135deg, #e5c158 0%, #fff 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <img src="must.png" alt="Luxury Shoe">
+        <div class="info">
+            <div class="price-capsule">
+                <div class="price-label">Price</div>
+                <div class="price-value">$2,499</div>
+            </div>
+            <h2>Prestige Runner</h2>
+            <p>Experience unmatched comfort and elegance. Designed with premium craftsmanship, this shoe is perfect for
+                those who demand luxury in every step.</p>
+            <div class="buttons">
+                <button class="cart">🛒 Add to Cart</button>
+                <button class="buy">💳 Buy Now</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
