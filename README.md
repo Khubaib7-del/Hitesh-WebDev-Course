@@ -20,7 +20,7 @@
   <br />
 
   <!-- Shield/Badge Buttons -->
-  [![Course Progress](https://img.shields.io/badge/Progress-40%25-blueviolet.svg?style=for-the-badge)](#)
+  [![Course Progress](https://img.shields.io/badge/Progress-42%25-blueviolet.svg?style=for-the-badge)](#)
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
   [![GitHub Profile](https://img.shields.io/badge/Author-Khubaib_Nazeer-ff69b4.svg?style=for-the-badge)](https://github.com/Khubaib7-del)
 
