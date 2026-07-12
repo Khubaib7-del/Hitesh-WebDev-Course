@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal with dropDown</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        .nav-container {
+            margin-bottom: 40px;
+            ;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            ;
+        }
+
+        .nav3 {
+            background-color: #45a2bb;
+            padding: 10px;
+            border-radius: 12px 12px;
+        }
+
+        .nav3 ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav3 a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px;
+            display: block;
+        }
+
+        .nav3 a:hover{
+            background-color:#186d84;
+            border-radius: 12px;
+        }
+
+        .nav3 .dropdown-content {
+            display: none;
+        }
+
+        .nav3 .dropdown:hover .dropdown-content {
+            display: block;
+            position: absolute;
+            top: 135px;
+            background-color: #3e3e3e;
+            min-width: 150px;
+            border:2px solid  #fff;
+            border-radius: 12px;
+        }
+
+        .nav3 .dropdown:hover .dropdown-content a:hover {
+            background-color: #252323;
+            border:2px slolid #1a1a1a;
+            border-radius: 12px;
+        }
+        .nav3 .login-btn{
+            color: #45a2bb;
+            background-color:#1a1a1a;
+            border: 2px solid white;
+            border-radius: 6px;
+            padding: 2px 6px;
+        }
+        .nav3 .login-btn:hover{
+            background-color: #fff;
+            color: #1a1a1a;
+            border: 2px solid #1a1a1a;
+    </style>
+</head>
+
+<body>
+    <div class="nav-container">
+        <h2>Variation 3: Horizontal with dropdown</h2>
+        <nav class="nav3">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">About</a>
+                    <div class="dropdown-content">
+                        <a href="#">Our Story</a>
+                        <a href="#">Team</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </li>
+                <li><a href="#">Products</a></li>
+                <li><button class="login-btn">Login</button></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+
+</html>
