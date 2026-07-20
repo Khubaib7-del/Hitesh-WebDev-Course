@@ -1,16 +1,17 @@
 import express from 'express';
 import cors from 'cors';
+import cookieParser from 'cookie-parser';
 const app = express();
-app.get('/', (req, res) => {
-    res.send('Welcome to BaseCampy')
-});
+
 //Basic express configuration
 //see app.use as middleware,
 //it is used to configure express
 //and add functionality to it.
-app.use(express.json({limit: '16kb'}));
-app.use (express.urlencoded({extended: true, limit: '16kb'}))
+app.use(express.json({ limit: '16kb' }));
+app.use(express.urlencoded({ extended: true, limit: '16kb' }))
 app.use(express.static('public'));
+app.use(cookieParser());
+
 
 //CORS configuration
 app.use(cors({
@@ -20,5 +21,14 @@ app.use(cors({
     allowHeaders: ['Content-Type', 'Authorization']
 }))
 
+//creating cutom routing layers
+import healthCheckRouter from './routes/healthcheck.routes.js';
+import authRouter from './routes/auth.routes.js';
 
+app.use('/api/v1/healthcheck', healthCheckRouter);
+app.use('/api/v1/auth', authRouter);
+
+app.get('/', (req, res) => {
+    res.send('Welcome to BaseCampy')
+});
 export default app;
